@@ -27,21 +27,23 @@
 
         <!-- reference jQuery library -->
 <!--        <script src="library/jquery-3.2.1.js"></script>-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		
-        <script>
+<!--
+        <script> 
             $(document).ready(function(){
                 $("#iconA").click(function(){
-                    $(".subSideBar-liA").toggle();
+                    $(".subSideBar-liA").slideUp("slow");
                 });
             });
+            
             $(document).ready(function(){
                 $("#iconB").click(function(){
-                    $(".subSideBar-liB").toggle();
+                    $(".subSideBar-liB").slideUp("slow");
                 });
             });
-
+            
         </script>
+-->
         
 
 	</head>
@@ -52,6 +54,8 @@
 	
 	<!-- BEGIN body -->
 	<body>
+	   
+	    <script type="text/javascript" src="js/SideBarJS.js"></script>
 	   
 	
 	    <!-- BEGIN header -->
@@ -74,10 +78,12 @@
 		<!-- BEGIN vertical navigation bar -->
 		<div class="sideBar col-2 col-m-4">
     		<ul class="sideBar-ul">
-        		<li id="iconA" class="sideBar-li">About Me</li>
+        		<li class="sideBar-li"><a onclick="showSubMenu()" href="#pageTop">About Me
+                    <i id="iconA" class="fa fa-caret-square-o-down" aria-hidden="true"></i></a></li>
         		         <li class="subSideBar-liA"><a href="#whoIam">Who I Am</a></li>
         		     	 <li class="subSideBar-liA"><a href="#resume">Resume</a></li>
-        		<li id="iconB" class="sideBar-li">About This Page</li>
+        		<li class="sideBar-li"><a href="#aboutThisPage">About This Page
+                    <i id="iconB" class="fa fa-caret-square-o-down" aria-hidden="true"></i></a></li>
         		         <li class="subSideBar-liB"><a href="#wgup">Why use Github User Page</a></li>
                          <li class="subSideBar-liB"><a href="#dotp">Design of This Page</a></li>
     		</ul>
